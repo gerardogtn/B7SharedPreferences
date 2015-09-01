@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.4"
+            android:layout_weight="0.2"
             android:gravity="center"
             android:text="@string/app_friska"
             android:textColor="@color/white"
@@ -41,7 +41,6 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@mipmap/ic_launcher"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:hint="@string/hint_username"
@@ -66,7 +65,7 @@
 
         </LinearLayout>
 
-        <android.support.design.widget.FloatingActionButton
+        <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.15"
