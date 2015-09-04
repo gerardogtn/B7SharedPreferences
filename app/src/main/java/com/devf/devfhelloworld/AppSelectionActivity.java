@@ -1,15 +1,15 @@
 package com.devf.devfhelloworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class AppSelectionActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public static final String LOG_TAG = MainActivity.class.getSimpleName();
+    public static final String LOG_TAG = AppSelectionActivity.class.getSimpleName();
 
     Button btnFriska;
     Button btnWhatsong;
@@ -20,11 +20,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
+
         btnFriska = (Button) findViewById(R.id.btn_friska);
         btnWhatsong = (Button) findViewById(R.id.btn_whatsong);
         btnCardApp = (Button) findViewById(R.id.btn_card_app);
+        
 
-        btnFriska.setOnClickListener(this);
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        };
+
+        btnFriska.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Definir que hacer cuando el listener detecte que están haciendo click
+            }
+        });
+
+
+
+
+
+
+
         btnWhatsong.setOnClickListener(this);
         btnCardApp.setOnClickListener(this);
 
@@ -34,10 +55,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View viewClicked) {
         int idClickedView = viewClicked.getId();
 
-        switch (idClickedView){
+        switch (idClickedView) {
 
             case R.id.btn_friska:
-                Toast.makeText(this, "Friska", Toast.LENGTH_SHORT).show();
+                Intent veAFriska = new Intent(AppSelectionActivity.this, FriskaActivity.class);
+                startActivity(veAFriska);
                 break;
 
             case R.id.btn_whatsong:
