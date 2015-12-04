@@ -24,31 +24,10 @@ public class AppSelectionActivity extends AppCompatActivity implements View.OnCl
         btnFriska = (Button) findViewById(R.id.btn_friska);
         btnWhatsong = (Button) findViewById(R.id.btn_whatsong);
         btnCardApp = (Button) findViewById(R.id.btn_card_app);
-        
 
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        };
-
-        btnFriska.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Definir que hacer cuando el listener detecte que están haciendo click
-            }
-        });
-
-
-
-
-
-
-
+        btnFriska.setOnClickListener(this);
         btnWhatsong.setOnClickListener(this);
         btnCardApp.setOnClickListener(this);
-
     }
 
     @Override

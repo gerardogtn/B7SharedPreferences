@@ -18,13 +18,13 @@ public class FriskaHomeActivity extends AppCompatActivity {
 
         etiquetaDelUsername = (TextView) findViewById(R.id.txt_username);
 
-        //Recuperación de los datos
-        Intent intentDelLogin = getIntent();
-
-        String usernameCapturado = intentDelLogin.getStringExtra("EXTRA_USERNAME");
-
-        //Pintar el username
-        etiquetaDelUsername.setText(usernameCapturado);
+//        //Recuperación de los datos
+//        Intent intentDelLogin = getIntent();
+//
+//        String usernameCapturado = intentDelLogin.getStringExtra("EXTRA_USERNAME");
+//
+//        //Pintar el username
+        etiquetaDelUsername.setText(UsernameSharedPreferences.getUsername(this));
     }
 
 }

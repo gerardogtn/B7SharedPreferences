@@ -56,8 +56,11 @@ public class FriskaActivity extends AppCompatActivity implements View.OnClickLis
 
         else {
             Intent veAlHome = new Intent(this, FriskaHomeActivity.class);
-            veAlHome.putExtra("EXTRA_USERNAME", usuarioCapturado);
-            veAlHome.putExtra("EXTRA_PASSWORD", passwordCapturado);
+//            veAlHome.putExtra("EXTRA_USERNAME", usuarioCapturado);
+//            veAlHome.putExtra("EXTRA_PASSWORD", passwordCapturado);
+
+            UsernameSharedPreferences.setUsername(this, usuarioCapturado);
+            UsernameSharedPreferences.setUserPassword(this, passwordCapturado);
 
             startActivity(veAlHome);
         }
